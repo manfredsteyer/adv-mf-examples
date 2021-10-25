@@ -13,11 +13,12 @@
     "build": "npm run build:shell && npm run build:mfe1",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js"
   },
   "private": true,
   "dependencies": {
-    "@angular-architects/module-federation": "^12.0.1",
+    "@angular-architects/module-federation": "^12.5.2",
     "@angular/animations": "12.0.0",
     "@angular/common": "12.0.0",
     "@angular/compiler": "12.0.0",
