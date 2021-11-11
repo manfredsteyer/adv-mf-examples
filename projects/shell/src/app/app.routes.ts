@@ -13,33 +13,25 @@ export const APP_ROUTES: Routes = [
     pathMatch: 'full'
   },
 
-  // Your route here:
-  {
-    path: 'flights',
-    loadChildren: () => import('mfe1/Module').then(m => m.FlightsModule)
-  },
+  // {
+  //   path: 'flights',
+  //   loadChildren: () => 
+  //     loadRemoteModule({
+  //       remoteEntry: URL,
+  //       remoteName: 'mfe1',
+  //       exposedModule: './Module'
+  //     })
+  //     .then(m => m.FlightsModule)
+  //   //import('mfe1/Module').then(m => m.FlightsModule)
+  // },
 
   {
     path: '**',
     component: NotFoundComponent
-  }
+  },
 
   // DO NOT insert routes after this one.
   // { path:'**', ...} needs to be the LAST one.
 
 ];
 
-
-
-
-  // {
-  //   // path: 'react',
-  //   matcher: startsWith('react'),
-  //   component: WebComponentWrapper,
-  //   data: {
-  //     remoteEntry: 'https://witty-wave-0a695f710.azurestaticapps.net/remoteEntry.js',
-  //     remoteName: 'react',
-  //     exposedModule: './web-components',
-  //     elementName: 'react-element'
-  //   } as WebComponentWrapperOptions
-  // },

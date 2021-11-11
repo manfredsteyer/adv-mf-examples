@@ -26,7 +26,7 @@ module.exports = {
       
         // For remotes (please adjust) remote === Micro Frontend
         name: "mfe1",
-        filename: "remoteEntry.js", // <-- Metadaen
+        filename: "remoteEntry.js", // <-- Metadaten 2-3K (prod)
         exposes: {
             './Module': './projects/mfe1/src/app/flights/flights.module.ts',
         },        
