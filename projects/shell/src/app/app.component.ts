@@ -13,20 +13,35 @@ export class AppComponent {
   
   constructor(router: Router) {
 
-    // Talk to backand about micro frontends
-    const microfrontends = [
-      {
-        path: 'flights',
-        loadChildren: () => 
-          // import('mfe1/Module')
-          loadRemoteModule({
-            remoteEntry: 'http://localhost:3000/remoteEntry.js',
-            remoteName: 'mfe1',
-            exposedModule: './Module'
-          })
-        .then(m => m.FlightsModule)
-      },
-      {
+    // // Talk to backand about micro frontends
+    // const microfrontends = [
+    //   {
+    //     path: 'flights',
+    //     loadChildren: () => 
+    //       // import('mfe1/Module')
+    //       loadRemoteModule({
+    //         remoteEntry: 'http://localhost:3000/remoteEntry.js',
+    //         remoteName: 'mfe1',
+    //         exposedModule: './Module'
+    //       })
+    //     .then(m => m.FlightsModule)
+    //   },
+    
+
+     
+    // ];
+
+    // const routes = [...microfrontends, ...APP_ROUTES];
+
+    // router.resetConfig(routes);
+
+  }
+}
+
+
+/*
+
+  {
         //path: 'react',
         matcher: startsWith('react'), // react/a/b/c
         component: WebComponentWrapper,
@@ -37,19 +52,4 @@ export class AppComponent {
           elementName: 'react-element'
         } as WebComponentWrapperOptions
       },
-
-     
-    ];
-
-    const routes = [...microfrontends, ...APP_ROUTES];
-
-    router.resetConfig(routes);
-
-  }
-}
-
-
-/*
-
-
 */

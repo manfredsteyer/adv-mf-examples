@@ -13,17 +13,10 @@ export const APP_ROUTES: Routes = [
     pathMatch: 'full'
   },
 
-  // {
-  //   path: 'flights',
-  //   loadChildren: () => 
-  //     loadRemoteModule({
-  //       remoteEntry: URL,
-  //       remoteName: 'mfe1',
-  //       exposedModule: './Module'
-  //     })
-  //     .then(m => m.FlightsModule)
-  //   //import('mfe1/Module').then(m => m.FlightsModule)
-  // },
+  {
+    path: 'flights',
+    loadChildren: () => import('mfe1/Module').then(m => m.FlightsModule)
+  },
 
   {
     path: '**',
@@ -35,3 +28,15 @@ export const APP_ROUTES: Routes = [
 
 ];
 
+
+// {
+  //   path: 'flights',
+  //   loadChildren: () => 
+  //     loadRemoteModule({
+  //       remoteEntry: URL,
+  //       remoteName: 'mfe1',
+  //       exposedModule: './Module'
+  //     })
+  //     .then(m => m.FlightsModule)
+  //   //import('mfe1/Module').then(m => m.FlightsModule)
+  // },
