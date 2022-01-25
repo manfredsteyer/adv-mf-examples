@@ -25,11 +25,11 @@ module.exports = {
     new ModuleFederationPlugin({
       
         // For hosts (please adjust)
-        remotes: {
-          "mfe1": "mfe1@http://localhost:3000/remoteEntry.js", // <- Metadata
-          //                      ^---- Static Federation
-          //                         \---- Dynamic Federation (Alternative)
-        },
+        // remotes: {
+        //   "mfe1": "mfe1@http://localhost:3000/remoteEntry.js", // <- Metadata
+        //   //                      ^---- Static Federation
+        //   //                         \---- Dynamic Federation (Alternative)
+        // },
 
         shared: share({
           "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' }, 

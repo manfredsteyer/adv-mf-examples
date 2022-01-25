@@ -13,12 +13,10 @@ export class AppComponent {
   
   constructor(router: Router) {
 
-    // // Talk to backand about micro frontends
     // const microfrontends = [
     //   {
     //     path: 'flights',
     //     loadChildren: () => 
-    //       // import('mfe1/Module')
     //       loadRemoteModule({
     //         remoteEntry: 'http://localhost:3000/remoteEntry.js',
     //         remoteName: 'mfe1',
@@ -27,8 +25,6 @@ export class AppComponent {
     //     .then(m => m.FlightsModule)
     //   },
     
-
-     
     // ];
 
     // const routes = [...microfrontends, ...APP_ROUTES];
@@ -41,7 +37,7 @@ export class AppComponent {
 
 /*
 
-  {
+       {
         //path: 'react',
         matcher: startsWith('react'), // react/a/b/c
         component: WebComponentWrapper,
