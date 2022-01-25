@@ -22,8 +22,8 @@ export const APP_ROUTES: Routes = [
     path: 'flights',
     loadChildren: () => 
       loadRemoteModule({
+        type: 'module',
         remoteEntry: 'http://localhost:3000/remoteEntry.js',
-        remoteName: 'mfe1',
         exposedModule: './Module'
       })
       .then(m => m.FlightsModule)

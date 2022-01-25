@@ -21,9 +21,14 @@ module.exports = {
       ...sharedMappings.getAliases(),
     }
   },
+  experiments: {
+    outputModule: true
+  }, 
   plugins: [
     new ModuleFederationPlugin({
       
+        library: { type: "module" },
+
         // For remotes (please adjust) remote === Micro Frontend
         name: "mfe1",
         filename: "remoteEntry.js", // <-- Metadaten 2-3K (prod)
