@@ -21,12 +21,17 @@ module.exports = {
       ...sharedMappings.getAliases(),
     }
   },
+  experiments: {
+    outputModule: true
+  },
   plugins: [
     new ModuleFederationPlugin({
-      
+        
+        library: { type: "module" },
+
         // For hosts (please adjust)
         remotes: {
-          "mfe1": "mfe1@http://localhost:3000/remoteEntry.js", 
+          "mfe1": "http://localhost:3000/remoteEntry.js", 
         },
 
         shared: share({

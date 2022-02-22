@@ -15,31 +15,36 @@ module.exports = {
   },
   optimization: {
     runtimeChunk: false
-  },   
+  },
   resolve: {
     alias: {
       ...sharedMappings.getAliases(),
     }
   },
+  experiments: {
+    outputModule: true
+  },  
   plugins: [
     new ModuleFederationPlugin({
-      
-        // For remotes (please adjust) remote === Micro Frontend
-        name: "mfe1",
-        filename: "remoteEntry.js", // <-- Metadaten 2-3K (prod)
-        exposes: {
-            './Module': './projects/mfe1/src/app/flights/flights.module.ts',
-        },        
-        
-        shared: share({
-          "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' }, 
-          "@angular/common": { singleton: true, strictVersion: true, requiredVersion: 'auto' }, 
-          "@angular/common/http": { singleton: true, strictVersion: true, requiredVersion: 'auto' }, 
-          "@angular/router": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
 
-          ...sharedMappings.getDescriptors()
-        })
-        
+      library: { type: "module" },
+
+      // For remotes (please adjust) remote === Micro Frontend
+      name: "mfe1",
+      filename: "remoteEntry.js", // <-- Metadaten 2-3K (prod)
+      exposes: {
+        './Module': './projects/mfe1/src/app/flights/flights.module.ts',
+      },
+
+      shared: share({
+        "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
+        "@angular/common": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
+        "@angular/common/http": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
+        "@angular/router": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
+
+        ...sharedMappings.getDescriptors()
+      })
+
     }),
     sharedMappings.getPlugin()
   ],

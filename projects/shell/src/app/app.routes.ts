@@ -30,14 +30,12 @@ export const APP_ROUTES: Routes = [
 
 
 
-
-
 // {
 //   path: 'flights',
 //   loadChildren: () => 
 //     loadRemoteModule({
+//       type: 'module',
 //       remoteEntry: URL,
-//       remoteName: 'mfe1',
 //       exposedModule: './Module'
 //     })
 //     .then(m => m.FlightsModule)
