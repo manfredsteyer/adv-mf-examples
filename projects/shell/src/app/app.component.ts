@@ -1,5 +1,8 @@
+import { loadRemoteModule } from '@angular-architects/module-federation';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { APP_ROUTES } from './app.routes';
+import { WebComponentWrapper, WebComponentWrapperOptions, startsWith } from '@angular-architects/module-federation-tools';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +14,7 @@ export class AppComponent {
   constructor(router: Router) {
 
     // Talk to backand about micro frontends
+    
     // const microfrontends = [
     //   {
     //     path: 'flights',
@@ -23,6 +27,7 @@ export class AppComponent {
     //       })
     //     .then(m => m.FlightsModule)
     //   },
+
       
     // ];
 
@@ -36,15 +41,15 @@ export class AppComponent {
 
 /*
 
-    //   {
-    //     //path: 'react',
-    //     matcher: startsWith('react'), // react/a/b/c
-    //     component: WebComponentWrapper,
-    //     data: {
-    //       remoteEntry: 'https://witty-wave-0a695f710.azurestaticapps.net/remoteEntry.js',
-    //       remoteName: 'react',
-    //       exposedModule: './web-components',
-    //       elementName: 'react-element'
-    //     } as WebComponentWrapperOptions
-    //   },
+            {
+        //path: 'react',
+        matcher: startsWith('react'), // react/a/b/c
+        component: WebComponentWrapper,
+        data: {
+          remoteEntry: 'https://witty-wave-0a695f710.azurestaticapps.net/remoteEntry.js',
+          remoteName: 'react',
+          exposedModule: './web-components',
+          elementName: 'react-element'
+        } as WebComponentWrapperOptions
+      },
 */
