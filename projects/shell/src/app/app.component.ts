@@ -20,25 +20,13 @@ export class AppComponent {
     //     loadChildren: () => 
     //       // import('mfe1/Module')
     //       loadRemoteModule({
+    //         type: 'module',
     //         remoteEntry: 'http://localhost:3000/remoteEntry.js',
-    //         remoteName: 'mfe1',
     //         exposedModule: './Module'
     //       })
     //     .then(m => m.FlightsModule)
     //   },
-    //   {
-    //     //path: 'react',
-    //     matcher: startsWith('react'), // react/a/b/c
-    //     component: WebComponentWrapper,
-    //     data: {
-    //       remoteEntry: 'https://witty-wave-0a695f710.azurestaticapps.net/remoteEntry.js',
-    //       remoteName: 'react',
-    //       exposedModule: './web-components',
-    //       elementName: 'react-element'
-    //     } as WebComponentWrapperOptions
-    //   },
-
-     
+      
     // ];
 
     // const routes = [...microfrontends, ...APP_ROUTES];
@@ -51,5 +39,15 @@ export class AppComponent {
 
 /*
 
-
+    //   {
+    //     //path: 'react',
+    //     matcher: startsWith('react'), // react/a/b/c
+    //     component: WebComponentWrapper,
+    //     data: {
+    //       remoteEntry: 'https://witty-wave-0a695f710.azurestaticapps.net/remoteEntry.js',
+    //       remoteName: 'react',
+    //       exposedModule: './web-components',
+    //       elementName: 'react-element'
+    //     } as WebComponentWrapperOptions
+    //   },
 */

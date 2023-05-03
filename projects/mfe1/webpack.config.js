@@ -2,6 +2,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const mf = require("@angular-architects/module-federation/webpack");
 const path = require("path");
 const share = mf.share;
+const shareAll = mf.shareAll;
 
 const sharedMappings = new mf.SharedMappings();
 sharedMappings.register(
@@ -29,7 +30,6 @@ module.exports = {
 
       library: { type: "module" },
 
-      // For remotes (please adjust) remote === Micro Frontend
       name: "mfe1",
       filename: "remoteEntry.js", // <-- Metadaten 2-3K (prod)
       exposes: {
